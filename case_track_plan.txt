@@ -1,0 +1,23 @@
+changeLocale
+appReceiptNum: WAC2090xxxxxx
+initCaseSearch: CHECK STATUS
+
+May 1 : start 2090106468
+	end 2090107233
+May 4 : start 2090107381
+	end 2090108047
+May 5 : start 2090108048
+	end 2090108613
+
+1. Screening script - find all I-129f cases for specific date
+	inputs: Date
+		Start Range
+		End Range
+	output: csv file with all of the date's receipt numbers.
+		csv file will be named "Month_xx" when month is the same of the month and xx is the day. E.g June_03
+2. Merging script - Merge individual csv files into one csv file with cases per date
+	input: folder with csv files.
+	output: csv file with all of the i-129f receipts number for all of the month.
+3. Categorizing script - Find the statuse of every i-129F receipt number. (don't run on approved and rejected receipts)
+	input: csv file with all of the wanted receipts
+	output: csv file with the cases updated. 
